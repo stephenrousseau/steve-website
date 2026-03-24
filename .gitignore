@@ -1,0 +1,7 @@
+.cache/
+.idea/
+.gemini/
+.agents/
+.config/
+logs/
+ionos_backup/
