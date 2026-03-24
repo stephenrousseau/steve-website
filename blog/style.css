@@ -1,0 +1,200 @@
+:root {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #0099ff;
+  --font-sans: 'Helvetica', sans-serif;
+  --font-mono: monospace;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: #000000;
+}
+
+/* --- Shared Layout --- */
+
+#steve-header-container,
+div.nav,
+div.work,
+div.clips,
+div.post {
+  margin: 20px auto;
+}
+
+#steve-header-container,
+div.work,
+div.clips,
+div.post {
+  width: 100%;
+  max-width: 910px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* --- Shared Typography --- */
+
+.name,
+.nav,
+#steve-intro,
+.pm,
+.twitter,
+.email,
+.work,
+.clips,
+.post,
+.post-title {
+  color: var(--text-color);
+}
+
+.name,
+.work,
+.post-title {
+  font-family: var(--font-sans);
+  font-weight: bold;
+}
+
+.nav,
+#steve-intro,
+.pm,
+.twitter,
+.email,
+.clips,
+.post-text {
+  font-family: var(--font-mono);
+}
+
+.nav,
+#steve-intro,
+.pm,
+.clips,
+.post-text {
+  font-size: 14px;
+}
+
+.nav,
+#steve-intro,
+.pm,
+.twitter,
+.clips,
+.post-title {
+  text-decoration: none;
+}
+
+.twitter,
+.email {
+  font-weight: 700;
+}
+
+/* --- Element Specific Styles --- */
+
+.name {
+  width: 100%;
+  font-size: clamp(40px, 10vw, 86px);
+}
+
+.nav {
+  float: right;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    float: none;
+    text-align: left;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+#steve-intro {
+  width: 100%;
+  border-bottom: 3px solid var(--text-color);
+}
+
+.work {
+  font-size: 18px;
+}
+
+.post-title {
+  font-size: 28px;
+}
+
+/* --- Interactive States --- */
+
+a, 
+.email {
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent-color), var(--accent-color));
+  background-size: 0% 1px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-out, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover, 
+.email:hover {
+  background-size: 100% 1px;
+  background-position: left bottom;
+}
+
+a:hover,
+.email:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
+}
+
+.locked-link {
+  opacity: 0.4;
+}
+
+.locked-link:hover {
+  opacity: 1;
+}
+
+/* --- Entrance Animations --- */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#steve-header-container {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.work {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.clips, 
+.post {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+/* --- Utilities --- */
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: cssMarquee 15s linear infinite;
+}
+
+@keyframes cssMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}

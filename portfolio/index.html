@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Prevent search engines from indexing this page -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>portfolio</title>
+    <link rel="icon" href="https://steverousseau.info/favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style>
+        #private-content {
+            display: none;
+        }
+
+        .password-gate {
+            margin: 15vh auto;
+            text-align: center;
+            font-family: var(--font-mono);
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .password-gate h2 {
+            font-family: var(--font-sans);
+            font-size: clamp(24px, 5vw, 36px);
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .password-gate p {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .password-gate input {
+            padding: 12px 15px;
+            font-family: var(--font-mono);
+            font-size: 14px;
+            background: #111;
+            color: var(--text-color);
+            border: 1px solid #333;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .password-gate input:focus {
+            border-color: var(--accent-color);
+        }
+
+        .password-gate button {
+            padding: 12px 20px;
+            font-family: var(--font-mono);
+            font-size: 14px;
+            background: var(--text-color);
+            color: var(--bg-color);
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .password-gate button:hover {
+            background: var(--accent-color);
+            color: #fff;
+        }
+
+        #errorMsg {
+            color: #ff4444;
+            font-size: 12px;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The Lock Screen -->
+    <div id="gate" class="password-gate">
+        <h2>steve's portfolio</h2>
+        <p>password please.</p>
+        <form onsubmit="checkPassword(event)">
+            <input type="password" id="passInput" placeholder="Password..." autofocus />
+            <button type="submit">Unlock</button>
+        </form>
+        <div id="errorMsg">Incorrect password. Please try again.</div>
+    </div>
+
+    <!-- The Protected Content -->
+    <div id="private-content">
+        <div id="steve-header-container">
+            <div class="name">
+                portfolio
+                <div class="nav">
+                    <a class="nav" href="https://steverousseau.info/">home →</a>
+                </div>
+            </div>
+            <div id="steve-intro">
+                Speechwriting and copywriting samples. Do not distribute.<br><br>
+            </div>
+        </div>
+
+        <div class="work">Speechwriting</div>
+
+        <!-- You can edit these links to add your actual work -->
+        <div class="clips">
+            <a class="clips" href="https://www.youtube.com/watch?v=a3-OJxxW810" target="_blank"
+                rel="noopener noreferrer">The Android Show: XR Edition — <i>Google</i></a>
+        </div>
+        <div class="clips">
+            <a class="clips" href="https://www.youtube.com/watch?v=JXCXTQIIvM0" target="_blank"
+                rel="noopener noreferrer">Made By Google '25 — <i>Google</i></a>
+        </div>
+        <div class="clips">
+            <a class="clips" href="https://www.youtube.com/watch?v=GjvgtwSOCao" target="_blank"
+                rel="noopener noreferrer">Google I/O '25 Developer Keynote —
+                <i>Google</i></a>
+        </div>
+        <div class="clips">
+            <a class="clips" href="https://www.youtube.com/watch?v=pxlaUCJZ27E" target="_blank"
+                rel="noopener noreferrer">Made By Google '23 —
+                <i>Google</i></a>
+        </div>
+        <div class="clips">
+            Snapdragon Summit 2023 <a class="clips" href="https://www.youtube.com/watch?v=h_vh7_n_OPs" target="_blank"
+                rel="noopener noreferrer">Day 1</a> | <a class="clips"
+                href="https://www.youtube.com/watch?v=dJcSaEbzQN0" target="_blank" rel="noopener noreferrer">Day 2</a> —
+            <i>Qualcomm</i>
+        </div>
+        <div class="clips">
+            Google I/O 2023 <a class="clips" href="https://www.youtube.com/live/cNfINi5CNbY?si=qO7LrofKpSmLUTVe&t=4767"
+                target="_blank" rel="noopener noreferrer">Android</a> + <a class="clips"
+                href="https://www.youtube.com/live/cNfINi5CNbY?si=YHJzHA2vXgFx7SmD&t=5712" target="_blank"
+                rel="noopener noreferrer">Pixel</a> —
+            <i>Google</i>
+        </div>
+        <br>
+
+        <div class="work">Copywriting</div>
+        <div class="clips">
+            Quartz Tap Courses: <a class="clips"
+                href="https://web.archive.org/web/20191016113312/https://sponsored.qz.com/citrix/wx102/" target="_blank"
+                rel="noopener noreferrer">WX102</a>
+            <a class="clips" href="https://web.archive.org/web/20191120172001/https://sponsored.qz.com/citrix/wx103/"
+                target="_blank" rel="noopener noreferrer">WX103</a>
+            <a class="clips" href="https://web.archive.org/web/20200216222014/https://sponsored.qz.com/citrix/wx104/"
+                target="_blank" rel="noopener noreferrer">WX104</a>
+            <a class="clips" href="https://web.archive.org/web/20201212173308/https://sponsored.qz.com/citrix/wx105/"
+                target="_blank" rel="noopener noreferrer">WX105</a>
+            <a class="clips" href="https://web.archive.org/web/20201205105531/https://sponsored.qz.com/citrix/wx106/"
+                target="_blank" rel="noopener noreferrer">WX106</a> — <i>Citrix</i>
+        </div>
+        <div class="clips">
+            <a class="clips"
+                href="https://web.archive.org/web/20210703162247/https://qz.com/se/new-frontier-workplace-experience/"
+                target="_blank" rel="noopener noreferrer">The New Frontier: Workplace Experience —
+                <i>Citrix</i></a>
+        </div>
+        <div class="clips">
+            <a class="clips" href="https://sponsored.qz.com/ey/megatrends/" target="_blank"
+                rel="noopener noreferrer">Megatrends 2020 — <i>EY</i></a>
+        </div>
+        <div class="clips">
+            <a class="clips"
+                href="https://web.archive.org/web/20200603044614/https://qz.com/1760602/this-is-how-ai-understands-human-language/"
+                target="_blank" rel="noopener noreferrer">This is how AI understands human language —
+                <i>Microsoft</i></a>
+        </div>
+        <br>
+
+        <div class="work">Web Copy</div>
+        <div class="clips">
+            <a class="clips" href="https://www.lowesinnovationlabs.com/projects/lowe-s-style-studio" target="_blank"
+                rel="noopener noreferrer">Lowe's</a>
+        </div>
+        <div class="clips">
+            <a class="clips"
+                href="https://blog.youtube/news-and-events/youtube-joins-the-upfronts-building-the-youtube-of-the-future-for-viewers-creators-and-advertisers/"
+                target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+        <div class="clips">
+            <a class="clips" href="https://www.shopify.com/blog/term-loan" target="_blank"
+                rel="noopener noreferrer">Shopify</a>
+        </div>
+        <div class="clips">
+            <a class="clips"
+                href="https://www.qualcomm.com/snapdragon/news/why-on-device-ai-matters-for-ai-pcs-with-snapdragon-x-elite"
+                target="_blank" rel="noopener noreferrer">Qualcomm</a>
+        </div>
+        <div class="clips">
+            <a class="clips"
+                href="https://techcrunch.com/sponsor/sauce-labs/why-the-c-level-needs-to-start-thinking-about-testing/"
+                target="_blank" rel="noopener noreferrer">TechCrunch Brand Studio</a>
+        </div>
+        <br>
+    </div>
+
+    <script>
+        function checkPassword(e) {
+            e.preventDefault();
+            const pass = document.getElementById('passInput').value;
+
+            // Set your desired password here! I set it to 'codeword' for now.
+            if (pass.toLowerCase() === 'kalechips') {
+                // Hide gate and show content
+                document.getElementById('gate').style.display = 'none';
+                document.getElementById('private-content').style.display = 'block';
+
+                // Trigger the fade-up animations manually by re-applying the classes or just letting the CSS handle it
+            } else {
+                // Show error message
+                document.getElementById('errorMsg').style.display = 'block';
+                document.getElementById('passInput').value = ''; // clear input
+            }
+        }
+    </script>
+</body>
+
+</html>
